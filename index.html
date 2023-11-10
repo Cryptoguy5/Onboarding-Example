@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Example</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            background-color: white;
+            height: 80%;
+            width: 75%;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .one {
+            background-color: lightgray;
+            width: 25%;
+            height: 90%;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+
+
+        }
+
+        input {
+            width: 90%;         
+            padding: 10px;
+            padding-right: 20px;
+
+        }
+
+        .primary {
+            width: 90%;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+        }
+
+        .secondary {
+            background-color: grey;
+            color: black;
+            width: 90%;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: absolute;
+            bottom: 0px;
+            left: 20px;
+        }
+
+        #icon {
+            background-image: url(./pencil_1828911.png);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position: right;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 680px) {
+             body {
+                height: 100%;
+             }
+            
+            .main {
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .one {
+                width: 80%;
+                height: 500px;
+            }
+
+            .primary {
+                width: 90%           
+            }
+
+            .secondary {
+                width: 90%;
+            }
+
+            [type="file"] {
+                position: relative;
+                left: 100px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+      <div class="one">
+        <h2>What's Your Location?</h2>
+        <p>See people, jobs, and news in your area.</p>
+        <input type="text" placeholder="Country/Region">
+        <input type="text" placeholder="Postal Code">
+        <button class="primary">Continue</button>
+        <button class="secondary">Skip</button>
+      </div>
+      <div class="one">
+        <h2>Now, add a photo</h2>
+        <p>That way, people will recognize you.</p>
+        <input type="file">
+        <button class="primary">Add a photo</button>
+        <button class="secondary">Skip</button>
+      </div>
+      <div class="one">
+        <h2>Almost done! Let's confirm your email.</h2>
+        <p>Just click the link in the email that we sent you.</p>
+        <input type="email" id="icon" placeholder="Email to confirm">
+        <button class="primary">Go to email</button>
+        <button class="secondary">Resend Email</button>
+      </div>
+    </div> 
+</body>
+</html>
